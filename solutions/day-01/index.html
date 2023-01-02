@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+
+    <style>
+        .pStyling {
+            color: blue;
+            size: 16px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel"> 
+
+        const headerStyle = {color: "red", size: "24px"};
+        const dynamic = <p>hello</p>
+    
+        const myName = <h1>Dominik</h1>
+        const myFullData = (
+            <div>
+                {myName}
+                <p style={headerStyle}>Country: Dominik</p>
+                <p className="pStyling">E-Mail: dokoe92@gmail.com</p>
+                <p style={{size:"20px", color:"blue", fontWeight: "bold"}}>Phone: 00000</p>
+                <p>{dynamic}</p>
+            </div>
+        )
+
+        const footerElement = <footer>Created 02.01.2023</footer>
+
+        const myRoot = document.querySelector(".root");
+        ReactDOM.render(myFullData, myRoot)
+        
+
+
+    </script>
+  </body>
+</html>
